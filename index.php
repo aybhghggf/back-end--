@@ -74,8 +74,8 @@ $produits= getproduits();
     <!-- Product 1 -->
     <div class="col-md-6 col-lg-3">
       <div class="card h-100 shadow-sm border-0 product-card">
-        <div class="badge bg-primary position-absolute top-0 end-0 m-3"><?php ?></div>
-        <img src="images/<?php echo $produit['image'] ?>" class="card-img-top" alt="Phone 1">
+        <div class="badge bg-primary position-absolute top-0 end-0 m-3">En stock</div>
+        <img src="images/<?php echo $produit['image'] ?>" class="card-img-top" alt="Phone ">
         <div class="card-body">
           <h5 class="card-title"><?php echo $produit['nom']; ?></h5>
           <p class="text-muted">Apple</p>

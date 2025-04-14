@@ -150,12 +150,13 @@
     transition: var(--transition);
   }
   
-  .product-card .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    transition: var(--transition);
+  .product-card img {
+    height: 120px; /* Taille sghira dyal l’image */
+    object-fit: contain; /* l’image katsra kamla w ma ttsqatch */
+    width: 100%;
+    padding: 10px;
   }
-  
+    
   .product-card:hover .card-img-top {
     transform: scale(1.05);
   }
