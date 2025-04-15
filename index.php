@@ -89,15 +89,15 @@ $produits= getproduits();
               <i class="bi bi-star-half"></i>
             </div>
           </div>
-          <a href="#" class="btn btn-primary w-100"><i class="bi bi-cart-plus"></i> Add to Cart</a>
+          <form action="">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-cart-plus"></i> Add to Cart</button>
+          </form>
         </div>
       </div>
     </div>
     <?php endforeach ?>
-   
-  
   <div class="text-center mt-5">
-    <a href="#" class="btn btn-outline-primary btn-lg">View All Products</a>
+    <a href="product.php" class="btn btn-outline-primary btn-lg">View All Products</a>
   </div>
 </div>
 
