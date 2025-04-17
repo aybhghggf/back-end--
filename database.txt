@@ -63,3 +63,24 @@ INSERT INTO produits (nom, prix, image, categorie_id) VALUES
 ('Samsung Galaxy Z Flip5', 9999.00, '28.jpeg', 3),
 ('Samsung Galaxy Z Fold5', 17999.00, '29.jpeg', 3),
 ('Samsung Galaxy M04', 1499.00, '30.jpeg', 3);
+
+remove comments , and i have in database commandes and ligne de commandes:
+
+CREATE TABLE commandes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    date_commande DATETIME DEFAULT CURRENT_TIMESTAMP,
+    statut VARCHAR(50) DEFAULT 'en attente',
+    total DECIMAL(10, 2),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+CREATE TABLE ligne_commandes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    commande_id INT,
+    produit_id INT,
+    quantite INT DEFAULT 1,
+    prix_unitaire DECIMAL(10, 2),
+    FOREIGN KEY (commande_id) REFERENCES commandes(id),
+    FOREIGN KEY (produit_id) REFERENCES produits(id)
+);
+

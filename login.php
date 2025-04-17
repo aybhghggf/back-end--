@@ -82,7 +82,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         <!-- Submit Button -->
         <div class="d-grid">
           <button type="submit" class="btn btn-primary btn-lg btn-sign-up">
-            <i class="bi bi-person-plus me-2"></i>Create Account
+            <i class="bi bi-person-plus me-2"></i>Login
           </button>
         </div>
       </form>

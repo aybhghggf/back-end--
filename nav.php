@@ -31,7 +31,7 @@ $totalitems = array_sum($_SESSION['panier']);
         <ul class="nav d-flex mb-2 justify-content-center mb-md-0">
           <li><a href="index.php" class="nav-link px-2 fs-6">Home</a></li>
           <li><a href="product.php" class="nav-link px-2 fs-6">Smartphones</a></li>
-          <li><a href="About.php" class="nav-link px-2 fs-6">About</a></li>
+          <li><a href="commande.php" class="nav-link px-2 fs-6">commandes</a></li>
         </ul>
       </div>
 
@@ -47,6 +47,7 @@ $totalitems = array_sum($_SESSION['panier']);
          <?php 
           if(isset($_SESSION['user'])):
          ?>
+         
           <a href="logout.php" class="btn btn-outline-danger me-2 fs-6">
             <i class="bi bi-person"></i> Log out
           </a>
