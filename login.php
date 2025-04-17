@@ -23,10 +23,10 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $_SESSION['email_user'] = $user['email'];
         $_SESSION['id_user'] = $user['id'];
         header('Location:index.php?mes=connecte');
-        exit;
+        exit();
     } else {
         header('Location: login.php?error=1');
-        exit;
+        exit();
     }
 }
 ?>

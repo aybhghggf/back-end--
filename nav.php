@@ -2,14 +2,11 @@
 if(!isset($_SESSION)){
   session_start();
 }
-
-// Initialize the cart if not already set
 if (!isset($_SESSION['panier'])) {
     $_SESSION['panier'] = [];
 }
 
-// Calculate total items in the cart
-$totalitems = array_sum($_SESSION['panier']); // Sum all the quantities in the cart
+$totalitems = array_sum($_SESSION['panier']);
 ?>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,8 +44,16 @@ $totalitems = array_sum($_SESSION['panier']); // Sum all the quantities in the c
         </a>
 
         <!-- Login and Sign up buttons -->
+         <?php 
+          if(isset($_SESSION['user'])):
+         ?>
+          <a href="logout.php" class="btn btn-outline-danger me-2 fs-6">
+            <i class="bi bi-person"></i> Log out
+          </a>
+            <?php else: ?>
         <a href="login.php" class="btn btn-outline-primary me-2 fs-6"><i class="bi bi-person"></i> Login</a>
         <a href="sign.php" class="btn btn-primary fs-6"><i class="bi bi-person-plus"></i> Sign up</a>
+        <?php endif; ?>
       </div>
     </div>
   </div>
