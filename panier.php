@@ -3,7 +3,17 @@ if (!isset($_SESSION)) {
     session_start();
 }
 require_once 'db.php';
-
+if(isset($_GET['mes']) && $_GET['mes'] == 'connecté'){
+    echo'<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+      ✅ Vous êtes connecté avec succès !
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+}else{
+    echo'<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert ">
+    ❌ Vous n\'êtes pas connecté !
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label ="Close"></button>
+    </div>';
+}
 $produits = [];
 if (isset($_SESSION['panier'])) {
     foreach ($_SESSION['panier'] as $id => $quantite) {
@@ -15,7 +25,7 @@ if (isset($_SESSION['panier'])) {
             $produits[] = $produit;
         }
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +71,11 @@ if (isset($_SESSION['panier'])) {
             <?php endforeach; ?>
         </tbody>
     </table>
+    <?php }else{
+        echo '<h2 class="text-center mb-5">Votre panier est vide.</h2>';
+    } ?>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/script.js"></script>
 </html>

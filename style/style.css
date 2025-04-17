@@ -345,3 +345,103 @@
       font-size: 0.95rem;
     }
   }
+  .form-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .form-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .form-body {
+    padding: 2.5rem;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #dee2e6;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(58, 134, 255, 0.25);
+  }
+  
+  .form-floating > label {
+    padding: 0.8rem 1rem;
+  }
+  
+  .input-group-text {
+    background-color: #f8f9fa;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+  }
+  
+  .password-input {
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .password-toggle {
+    cursor: pointer;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .btn-sign-up {
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .social-sign-up {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-btn i {
+    font-size: 1.2rem;
+  }
+  
+  .google {
+    color: #EA4335;
+  }
+  
+  .facebook {
+    color: #3b5998;
+  }
+  
+  .twitter {
+    color: #1DA1F2;
+  }

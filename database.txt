@@ -1,0 +1,65 @@
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL
+);
+CREATE TABLE produits (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(150) NOT NULL,
+    description TEXT,
+    prix DECIMAL(10, 2) NOT NULL,
+    image VARCHAR(255),
+    categorie_id INT,
+    FOREIGN KEY (categorie_id) REFERENCES categories(id)
+);
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO categorie (nom) VALUES
+('Apple'),
+('Xiaomi'),
+('Samsung'),
+
+
+INSERT INTO produits (nom, description, prix, image, categorie_id) VALUES
+('iPhone 13', 'Smartphone Apple avec puce A15 Bionic.', 799.00, '01.jpeg', 1),
+('iPhone 13 Pro', 'Modèle Pro avec meilleur appareil photo.', 999.00, '02.jpeg', 1),
+('iPhone 14', 'Dernière génération avec plus de performance.', 899.00, '03.jpeg', 1),
+('iPhone 14 Pro Max', 'Écran plus grand et caméra améliorée.', 1199.00, '04.jpeg', 1),
+('iPhone SE 2022', 'iPhone compact et puissant.', 429.00, '05.jpeg', 1),
+('iPhone 12', 'Puce A14 Bionic avec design plat.', 699.00, '06.jpeg', 1),
+('iPhone 12 Mini', 'Version mini pour une prise en main facile.', 599.00, '07.jpeg', 1),
+('iPhone 11', 'Excellent rapport qualité-prix.', 499.00, '08.jpeg', 1),
+('iPhone XR', 'Un classique encore performant.', 399.00, '09.jpeg', 1),
+('iPhone X', 'Le premier iPhone avec Face ID.', 359.00, '10.jpeg', 1);
+
+
+INSERT INTO produit (nom, prix, image, categorie_id) VALUES
+('Xiaomi Redmi Note 12', 1799.99, '11.jpeg', 3),
+('Xiaomi Redmi 12C', 1499.00, '12.jpeg', 3),
+('Xiaomi 13 Lite', 2999.99, '13.jpeg', 3),
+('Xiaomi 13T Pro', 5499.00, '14.jpeg', 3),
+('Xiaomi Poco X5', 2199.00, '15.jpeg', 3),
+('Xiaomi 12T', 4199.99, '16.jpeg', 3),
+('Xiaomi Redmi Note 11', 1999.00, '17.jpeg', 3),
+('Xiaomi Redmi 10', 1699.00, '18.jpeg', 3),
+('Xiaomi Poco M5', 1899.00, '19.jpeg', 3),
+('Xiaomi Mi 11 Ultra', 6299.00, '20.jpeg', 3);
+
+
+INSERT INTO produits (nom, prix, image, categorie_id) VALUES
+('Samsung Galaxy S23', 7999.00, '21.jpeg', 3),
+('Samsung Galaxy S22', 6999.00, '22.jpeg', 3),
+('Samsung Galaxy A54', 4299.00, '23.jpeg', 3),
+('Samsung Galaxy A34', 3799.00, '24.jpeg', 3),
+('Samsung Galaxy A14', 2299.00, '25.jpeg', 3),
+('Samsung Galaxy M14', 1999.00, '26.jpeg', 3),
+('Samsung Galaxy S21 FE', 5599.00, '27.jpeg', 3),
+('Samsung Galaxy Z Flip5', 9999.00, '28.jpeg', 3),
+('Samsung Galaxy Z Fold5', 17999.00, '29.jpeg', 3),
+('Samsung Galaxy M04', 1499.00, '30.jpeg', 3);

@@ -2,6 +2,15 @@
 require_once 'db.php';
 require_once 'functions.php';
 $produits = getproduits();
+if (isset($_GET['mes']) && $_GET['mes'] == 'connecte') {
+    echo '
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+        ✅ Vous êtes connecté avec succès !
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>';
+}
+
+
 ?>
 
 

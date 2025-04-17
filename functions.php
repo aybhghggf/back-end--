@@ -48,4 +48,10 @@ function getbyid($id=null){
         return $produit;
 
 }
+function signup($fullName=null,$email=null,$phone=null,$password=null){
+    global $pdo;
+    $req="INSERT INTO users (fullname,email,phone,password) VALUES (?,?,?,?)";
+    $stmt = $pdo->prepare($req);
+    $stmt->execute([$fullName,$email,$phone,$password]);
+}
 ?>
