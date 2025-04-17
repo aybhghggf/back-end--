@@ -7,8 +7,6 @@ function getproduits($categoriefil = null, $primin = null, $prixmax = null) {
         global $pdo;
         $params = [];
         $conditions = [];
-    
-        // Si la catégorie est fournie
         if (!empty($categoriefil)) {
             $conditions[] = "categorie_id = :categorie";
             $params[':categorie'] = $categoriefil;
@@ -38,5 +36,16 @@ function getcategorie(){
         $stmt->execute();
         $categorie = $stmt->fetchAll();
         return $categorie;
+}
+function getbyid($id=null){
+        $params=[];
+        global $pdo;
+        $req = " SELECT * FROM produits WHERE id = :id ";
+        $params = [':id' => $id];
+        $stmt= $pdo->prepare($req);
+        $stmt->execute($params);
+        $produit = $stmt->fetch();
+        return $produit;
+
 }
 ?>

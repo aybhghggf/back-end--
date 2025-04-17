@@ -86,8 +86,8 @@ $produits= getproduits( $categoriefil, $prixmin, $prixmax );
                       <i class="bi bi-star-half"></i>
                     </div>
                   </div>
-                  <form action="">
-                    <button type="submit" class="btn btn-primary w-100">
+                  <form action="addtopanier.php?id=<?php echo $produit['id'] ?>" method="post">
+                    <button type="add" class="btn btn-primary w-100">
                       <i class="bi bi-cart-plus"></i> Add to Cart
                     </button>
                   </form>
